@@ -6,9 +6,9 @@
 
 USING_NS_CC;
 
-namespace mob
+namespace cn
 {
-    namespace paysdk
+    namespace analysdk
     {
         class JvmJniEnv {
         public:

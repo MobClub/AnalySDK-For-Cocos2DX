@@ -6,7 +6,7 @@
 #include "map"
 
 using namespace std;
-namespace mob
+namespace cn
 {
     namespace analysdk
     {

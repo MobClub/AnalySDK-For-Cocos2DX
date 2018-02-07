@@ -1,12 +1,13 @@
 //
 // Created by yjin on 2018/2/1.
 //
-#inlcude "RoleEvent.h"
-using namespace mob::analysdk;
+#include <C2DXAnalySDK/C2DXAnalySDKTypeDef.h>
+#include "RoleEvent.h"
+using namespace cn::analysdk;
 
-RoleEvent::RoleEvent(C2DXString uId,C2DXString rId)
+BaseEvent::BaseEvent(C2DXString* uId,C2DXString* rId)
 {
-    userId = uId;
+    setUserId(uId);
     roleId = rId;
 }
 
@@ -20,11 +21,11 @@ C2DXDictionary* RoleEvent::toHashMap(){
         diction->setObject(roRankLevel,"_roRankLevel");
         diction->setObject(roEnergy,"_roEnergy");
         diction->setObject(roMoney,"_roMoney");
-        diction->setObject(roCoin,"_roCoin);
-        diction->setObject(roSource1,"_roSource1");
+        diction->setObject(roCoin,"_roCoin");
+        diction->setObject(roSourcel,"_roSource1");
         diction->setObject(roSource2,"_roSource2");
         diction->setObject(roSource3,"_roSource3");
-        diction->setObject(roSource4,"_roSource4);
+        diction->setObject(reSource4,"_roSource4");
         return diction;
 }
 

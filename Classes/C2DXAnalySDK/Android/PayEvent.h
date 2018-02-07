@@ -7,22 +7,22 @@
 
 #include <stdio.h>
 #include "BaseEvent.h"
-namespace mob
+namespace cn
 {
     namespace analysdk
     {
         class PayEvent: public BaseEvent
         {
             public:
-            PayEvent(C2DXString userId,C2DXString roleId);
-            long payMoney;
-            C2DXString payContent;
-            C2DXString payType;
-            C2DXString payActivity;
-            long payDiscount;
-            C2DXString discountReason;
-            C2DXDictionary toHashMap();
-            ~PayEvent(C2DXString userId,C2DXString roleId);
+            PayEvent(C2DXString* userId,C2DXString* roleId);
+            C2DXDouble* payMoney;
+            C2DXString* payContent;
+            C2DXString* payType;
+            C2DXString* payActivity;
+            C2DXDouble* payDiscount;
+            C2DXString* discountReason;
+            C2DXDictionary* toHashMap();
+            ~PayEvent();
         };
     }
 }
