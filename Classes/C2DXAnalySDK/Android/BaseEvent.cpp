@@ -1,11 +1,12 @@
 //
 // Created by yjin on 2018/2/1.
 //
-#include"BaeEvent.h"
 
-using namespace mob::analysdk;
+#include <C2DXAnalySDK/C2DXAnalySDKTypeDef.h>
+#include "BaseEvent.h"
+using namespace cn::analysdk;
 
-BaeEvent::BaeEvent(C2DXString* userID,C2DXString* roleID)
+BaseEvent::BaseEvent(C2DXString* userID,C2DXString* roleID)
 {
     userId = userID;
     roleId = roleID;
@@ -14,26 +15,25 @@ BaeEvent::BaeEvent(C2DXString* userID,C2DXString* roleID)
     params->setObject(roleId,"_roleId");
 }
 
-C2DXString BaseEvent::getUserId()
+C2DXString* BaseEvent::getUserId()
 {
     return userId;
 }
 
-C2DXString BaseEvent::setUserId(C2DXString id)
+void BaseEvent::setUserId(C2DXString* id)
 {
     userId = id;
 }
 
-C2DXDictionary BaseEvent:toHashMap()
+C2DXDictionary* BaseEvent::toHashMap()
 {
     return params;
 }
 
-C2DXDictionary BaseEvent:getHashMap()
+C2DXDictionary* BaseEvent::getHashMap()
 {
 }
 
-BaeEvent::~BaeEvent()
+BaseEvent::~BaseEvent()
 {
-
 }

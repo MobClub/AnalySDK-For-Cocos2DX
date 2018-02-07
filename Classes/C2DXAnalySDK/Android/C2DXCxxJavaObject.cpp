@@ -1,6 +1,6 @@
 #include "C2DXCxxJavaObject.h"
 
-using namespace mob::analysdk;
+using namespace cn::analysdk;
 
 jobject C2DXCxxJavaObject::newJavaInstance(JNIEnv* env, const char* clazz)
 {

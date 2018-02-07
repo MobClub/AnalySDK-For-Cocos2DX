@@ -1,14 +1,17 @@
 //
 // Created by yjin on 2018/1/30.
 //
+#ifndef COCOS2DX_FOR_ANALYSDK_C2DXANDROIDANALYSDK_H
+#define COCOS2DX_FOR_ANALYSDK_C2DXANDROIDANALYSDK_H
+
 #include "UserEvent.h"
 #include "PayEvent.h"
 #include "RoleEvent.h"
 #include "JvmJniEnv.h"
 #include "CCJSONConverter.h"
-#ifndef COCOS2DX_FOR_ANALYSDK_C2DXANDROIDANALYSDK_H
-#define COCOS2DX_FOR_ANALYSDK_C2DXANDROIDANALYSDK_H
-namespace mob
+#include "C2DXCxxJavaObject.h"
+
+namespace cn
 {
     namespace analysdk
     {
@@ -17,23 +20,23 @@ namespace mob
              public:
                     C2DXAndroidAnalySDK();
                     ~C2DXAndroidAnalySDK();
-                     void setLocation(double longitude,double latitude);
+                     static void setLocation(C2DXDouble longitude,C2DXDouble latitude);
 
-                     void trackEvent(String eventName,C2DXDictionary dictionary);
+                     static void trackEvent(const char* eventName,C2DXDictionary* dictionary);
 
-                     void trackPayEvent(PayEvent payEvent);
+                     static void trackPayEvent(PayEvent* payEvent);
 
-                     void userRegist(UserEvent userevent);
+                     static void userRegist(UserEvent* userevent);
 
-                     void userLogin(UserEvent userevent);
+                     static void userLogin(UserEvent* userevent);
 
-                     void userUpdate(UserEvent userEvent);
+                     static void userUpdate(UserEvent* userEvent);
 
-                     void roleCreate(RoleEvent roleEvent);
+                     static void roleCreate(RoleEvent* roleEvent);
 
-                     void roleLogin(RoleEvent roleEvent);
+                     static void roleLogin(RoleEvent* roleEvent);
 
-                     void roleUpdate(RoleEvent roleEvent);
+                     static void roleUpdate(RoleEvent* roleEvent);
         };
     }
 

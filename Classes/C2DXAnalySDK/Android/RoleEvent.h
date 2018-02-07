@@ -7,26 +7,28 @@
 #ifndef COCOS2DX_FOR_ANALYSDK_ROLEEVENT_H
 #define COCOS2DX_FOR_ANALYSDK_ROLEEVENT_H
 
-namespace mob
+namespace cn
 {
     namespace analysdk{
         class RoleEvent :public BaseEvent
         {
             public:
-            C2DXString roServer;
-            C2DXString roName;
-            C2DXString roCareer;
-            int roLevel;
-            C2DXString roVip;
-            C2DXString roRankLevel;
-            int roEnergy;
-            float roMoney;
-            float roCoin;
-            float roSourcel;
-            float roSource2;
-            float roSource3;
-            float reSource4;
-            RoleEvent();
+            C2DXString* roServer;
+            C2DXString* roName;
+            C2DXString* roCareer;
+            C2DXInteger* roLevel;
+            C2DXString* roVip;
+            C2DXString* roRankLevel;
+            C2DXInteger* roEnergy;
+            C2DXDouble* roMoney;
+            C2DXDouble* roCoin;
+            C2DXDouble* roSourcel;
+            C2DXDouble* roSource2;
+            C2DXDouble* roSource3;
+            C2DXDouble* reSource4;
+            C2DXDictionary* toHashMap();
+             RoleEvent(C2DXString userId,C2DXString roleId);
+            ~RoleEvent();
         };
     }
 }
