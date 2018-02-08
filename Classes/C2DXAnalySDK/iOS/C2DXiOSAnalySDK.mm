@@ -934,14 +934,3 @@ static void setLocation(double latitude, double longitude)
     [AnalySDK setLocation:location];
 }
 
-static void trackId(TrackIdResult callback)
-{
-    [AnalySDK trackId:^(NSString *trackId) {
-        
-        if (trackId)
-        {
-            callback([trackId UTF8String]);
-        }
-    }];
-}
-

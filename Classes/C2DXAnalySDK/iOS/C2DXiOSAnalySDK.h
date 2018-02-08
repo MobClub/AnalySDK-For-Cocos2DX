@@ -9,7 +9,6 @@
 #include "cocos2d.h"
 
 #import "C2DXAnalySDKTypeDef.h"
-#include "AnalySDKCallBack.h"
 #include "User.h"
 #include "PayEvent.h"
 #include "Role.h"
@@ -85,13 +84,7 @@ namespace mob
              *    @param     callback     回调方法
              */
             static void setLocation(double latitude, double longitude);
-            
-            /**
-             获取跟踪标识
-             
-             @param callback 回调
-             */
-            static void trackId(TrackIdResult callback);
+
         };
     }
 }

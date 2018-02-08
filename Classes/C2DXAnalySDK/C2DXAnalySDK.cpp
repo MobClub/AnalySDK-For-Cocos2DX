@@ -130,16 +130,3 @@ void setLocation(double latitude, double longitude)
 #endif
 }
 
-static void trackId(TrackIdResult callback)
-{
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
-    
-    //Andorid
-    
-#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
-    
-    //iOS
-    C2DXiOSAnalySDK::trackId(callback);
-    
-#endif
-}

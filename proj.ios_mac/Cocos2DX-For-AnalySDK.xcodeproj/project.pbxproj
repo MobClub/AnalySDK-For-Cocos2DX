@@ -187,7 +187,6 @@
 		DEFDD192202C33FF00EB23A7 /* PayEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PayEvent.cpp; sourceTree = "<group>"; };
 		DEFDD193202C33FF00EB23A7 /* User.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = User.cpp; sourceTree = "<group>"; };
 		DEFDD194202C340000EB23A7 /* Role.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Role.cpp; sourceTree = "<group>"; };
-		DEFDD195202C340000EB23A7 /* AnalySDKCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalySDKCallBack.h; sourceTree = "<group>"; };
 		DEFDD196202C340000EB23A7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		DEFDD197202C340000EB23A7 /* PayEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayEvent.h; sourceTree = "<group>"; };
 		DEFDD198202C340000EB23A7 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
@@ -393,7 +392,6 @@
 		DE3DE0F020104672009D8968 /* C2DXAnalySDK */ = {
 			isa = PBXGroup;
 			children = (
-				DEFDD195202C340000EB23A7 /* AnalySDKCallBack.h */,
 				DEFDD192202C33FF00EB23A7 /* PayEvent.cpp */,
 				DEFDD197202C340000EB23A7 /* PayEvent.h */,
 				DEFDD194202C340000EB23A7 /* Role.cpp */,
