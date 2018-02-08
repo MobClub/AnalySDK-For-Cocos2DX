@@ -70,6 +70,11 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		DE3DE0F920104672009D8968 /* C2DXAnalySDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE0F120104672009D8968 /* C2DXAnalySDK.cpp */; };
 		DE3DE0FA20104672009D8968 /* C2DXiOSAnalySDK.mm in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE0F520104672009D8968 /* C2DXiOSAnalySDK.mm */; };
+		DEFDD190202C33AE00EB23A7 /* AnalySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFDD18C202C33AE00EB23A7 /* AnalySDK.framework */; };
+		DEFDD191202C33AE00EB23A7 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFDD18E202C33AE00EB23A7 /* MOBFoundation.framework */; };
+		DEFDD199202C340000EB23A7 /* PayEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEFDD192202C33FF00EB23A7 /* PayEvent.cpp */; };
+		DEFDD19A202C340000EB23A7 /* User.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEFDD193202C33FF00EB23A7 /* User.cpp */; };
+		DEFDD19B202C340000EB23A7 /* Role.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEFDD194202C340000EB23A7 /* Role.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -177,6 +182,15 @@
 		DE3DE0F420104672009D8968 /* C2DXiOSAnalySDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C2DXiOSAnalySDK.h; sourceTree = "<group>"; };
 		DE3DE0F520104672009D8968 /* C2DXiOSAnalySDK.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = C2DXiOSAnalySDK.mm; sourceTree = "<group>"; };
 		DE3DE0FC201046E0009D8968 /* C2DXAnalySDKTypeDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C2DXAnalySDKTypeDef.h; sourceTree = "<group>"; };
+		DEFDD18C202C33AE00EB23A7 /* AnalySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnalySDK.framework; sourceTree = "<group>"; };
+		DEFDD18E202C33AE00EB23A7 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		DEFDD192202C33FF00EB23A7 /* PayEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PayEvent.cpp; sourceTree = "<group>"; };
+		DEFDD193202C33FF00EB23A7 /* User.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = User.cpp; sourceTree = "<group>"; };
+		DEFDD194202C340000EB23A7 /* Role.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Role.cpp; sourceTree = "<group>"; };
+		DEFDD195202C340000EB23A7 /* AnalySDKCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalySDKCallBack.h; sourceTree = "<group>"; };
+		DEFDD196202C340000EB23A7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		DEFDD197202C340000EB23A7 /* PayEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayEvent.h; sourceTree = "<group>"; };
+		DEFDD198202C340000EB23A7 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -194,12 +208,14 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				DEFDD191202C33AE00EB23A7 /* MOBFoundation.framework in Frameworks */,
 				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
+				DEFDD190202C33AE00EB23A7 /* AnalySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +278,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				DEFDD18A202C33AE00EB23A7 /* SDK */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
@@ -376,6 +393,13 @@
 		DE3DE0F020104672009D8968 /* C2DXAnalySDK */ = {
 			isa = PBXGroup;
 			children = (
+				DEFDD195202C340000EB23A7 /* AnalySDKCallBack.h */,
+				DEFDD192202C33FF00EB23A7 /* PayEvent.cpp */,
+				DEFDD197202C340000EB23A7 /* PayEvent.h */,
+				DEFDD194202C340000EB23A7 /* Role.cpp */,
+				DEFDD198202C340000EB23A7 /* Role.h */,
+				DEFDD193202C33FF00EB23A7 /* User.cpp */,
+				DEFDD196202C340000EB23A7 /* User.h */,
 				DE3DE0F220104672009D8968 /* C2DXAnalySDK.hpp */,
 				DE3DE0F120104672009D8968 /* C2DXAnalySDK.cpp */,
 				DE3DE0FC201046E0009D8968 /* C2DXAnalySDKTypeDef.h */,
@@ -391,6 +415,31 @@
 				DE3DE0F520104672009D8968 /* C2DXiOSAnalySDK.mm */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		DEFDD18A202C33AE00EB23A7 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				DEFDD18B202C33AE00EB23A7 /* AnalySDK */,
+				DEFDD18D202C33AE00EB23A7 /* Required */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		DEFDD18B202C33AE00EB23A7 /* AnalySDK */ = {
+			isa = PBXGroup;
+			children = (
+				DEFDD18C202C33AE00EB23A7 /* AnalySDK.framework */,
+			);
+			path = AnalySDK;
+			sourceTree = "<group>";
+		};
+		DEFDD18D202C33AE00EB23A7 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				DEFDD18E202C33AE00EB23A7 /* MOBFoundation.framework */,
+			);
+			path = Required;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,13 +590,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFDD19A202C340000EB23A7 /* User.cpp in Sources */,
 				DE3DE0FA20104672009D8968 /* C2DXiOSAnalySDK.mm in Sources */,
+				DEFDD199202C340000EB23A7 /* PayEvent.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				DE3DE0F920104672009D8968 /* C2DXAnalySDK.cpp in Sources */,
+				DEFDD19B202C340000EB23A7 /* Role.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +636,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK/AnalySDK",
+					"$(PROJECT_DIR)/SDK/Required",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -617,6 +674,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK/AnalySDK",
+					"$(PROJECT_DIR)/SDK/Required",
+				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
