@@ -30,22 +30,22 @@ namespace mob
             std::string *payContent;
             
             /**
-             *  区服
+             *  支付类型
              */
             std::string *payType;
             
             /**
-             *  角色名称
+             *  支付活动
              */
             std::string *payActivity;
             
             /**
-             *  角色等级
+             *  折扣
              */
             double payDiscount;
             
             /**
-             *  角色职业
+             *  折扣原因
              */
             std::string *discountReason;
             
