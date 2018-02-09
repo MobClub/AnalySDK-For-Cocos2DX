@@ -4,14 +4,15 @@
 #ifndef COCOS2DX_FOR_ANALYSDK_C2DXANDROIDANALYSDK_H
 #define COCOS2DX_FOR_ANALYSDK_C2DXANDROIDANALYSDK_H
 
-#include "UserEvent.h"
+#include <C2DXAnalySDK/PayEvent.h>
+#include "User.h"
 #include "PayEvent.h"
-#include "RoleEvent.h"
+#include "Role.h"
 #include "JvmJniEnv.h"
 #include "CCJSONConverter.h"
 #include "C2DXCxxJavaObject.h"
 
-namespace cn
+namespace mob
 {
     namespace analysdk
     {
@@ -26,17 +27,17 @@ namespace cn
 
                      static void trackPayEvent(PayEvent* payEvent);
 
-                     static void userRegist(UserEvent* userevent);
+                     static void userRegist(User* userevent);
 
-                     static void userLogin(UserEvent* userevent);
+                     static void userLogin(User* userevent);
 
-                     static void userUpdate(UserEvent* userEvent);
+                     static void userUpdate(User* userEvent);
 
-                     static void roleCreate(RoleEvent* roleEvent);
+                     static void roleCreate(Role* roleEvent);
 
-                     static void roleLogin(RoleEvent* roleEvent);
+                     static void roleLogin(Role* roleEvent);
 
-                     static void roleUpdate(RoleEvent* roleEvent);
+                     static void roleUpdate(Role* roleEvent);
         };
     }
 
