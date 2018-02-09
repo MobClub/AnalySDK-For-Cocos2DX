@@ -7,6 +7,7 @@
 
 #include "C2DXAnalySDK.hpp"
 #include "C2DXiOSAnalySDK.h"
+#include "C2DXAndroidAnalySDK.h"
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
@@ -22,6 +23,7 @@ void trackEvent(const char *eventName, C2DXDictionary *eventParams)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::trackEvent(eventName,eventParams);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -37,6 +39,7 @@ void trackPayEvent(PayEvent *payEvent)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::trackPayEvent(payEvent);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -51,6 +54,7 @@ void userRegister(User *user)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::userRegist(user);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -65,6 +69,7 @@ void userUpdate(User *user)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::userUpdate(user);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -79,6 +84,7 @@ void roleCreate(Role *role)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::roleCreate(role);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -93,6 +99,7 @@ void roleLogin(Role *role)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::roleLogin(role);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -107,6 +114,7 @@ void roleUpdate(Role *role)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::roleUpdate(role);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -121,6 +129,7 @@ void setLocation(double latitude, double longitude)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::setLocation(latitude,longitude);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     

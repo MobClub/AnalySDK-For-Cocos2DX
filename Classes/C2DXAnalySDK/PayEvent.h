@@ -22,7 +22,7 @@ namespace mob
             /**
              *  支付价钱,单位为分
              */
-            int payMoney;
+            int *payMoney;
             
             /**
              *  角色id(必传属性)
@@ -42,7 +42,7 @@ namespace mob
             /**
              *  折扣
              */
-            double payDiscount;
+            double *payDiscount;
             
             /**
              *  折扣原因
@@ -53,6 +53,8 @@ namespace mob
              *  其他自定义属性
              */
             C2DXDictionary *customProperties;
+
+            std::string toString();
         };
     }
 }

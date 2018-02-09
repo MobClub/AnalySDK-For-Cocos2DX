@@ -29,6 +29,8 @@ public:
     char * strFrom(__Dictionary * dictionary);
     
     __Dictionary * dictionaryFrom(const char * str);
+
+    cJSON * getObjJson(Ref * obj);
     
 private:
     void convertJsonToDictionary(cJSON *json, __Dictionary *dictionary);
@@ -38,8 +40,6 @@ private:
     void convertJsonToArray(cJSON * json, __Array * array);
     
     void convertArrayToJson(__Array * array, cJSON * json);
-    
-    cJSON * getObjJson(Ref * obj);
     
     Ref * getJsonObj(cJSON * json);
 };
