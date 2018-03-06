@@ -32,7 +32,6 @@
  */
 + (void)trackPayEvent:(ALSDKPayEvent *)payEvent;
 
-
 /**
  用户注册事件
  建议使用 +[ALSDKUser userWithId:regType:regChannel:]
@@ -100,5 +99,13 @@
  *  @param user   用户对象
  */
 + (void)identifyUser:(NSString *)userId userEntity:(ALSDKUser *)user __deprecated_msg("use userRegist/userLogin/userUpdate instead.");
+
+/**
+ 是否开启测试日志。默认关闭。
+ 当开启时,如发现有问题日志,会以log形式显示。
+ 
+ @param enable 开关YES/NO
+ */
++ (void)enableDebugLog:(BOOL)enable;
 
 @end

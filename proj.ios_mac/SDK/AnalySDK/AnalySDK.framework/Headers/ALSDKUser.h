@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+ 统计用户对象
+ */
 @interface ALSDKUser : NSObject
 
 /**

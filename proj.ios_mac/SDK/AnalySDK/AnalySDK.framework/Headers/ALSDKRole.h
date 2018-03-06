@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 统计角色对象
+ */
 @interface ALSDKRole : NSObject
 
 /**

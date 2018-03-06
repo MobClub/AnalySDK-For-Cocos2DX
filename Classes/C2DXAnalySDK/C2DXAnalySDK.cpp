@@ -7,8 +7,10 @@
 
 #include "C2DXAnalySDK.hpp"
 
+
 #include "C2DXiOSAnalySDK.h"
 #include "C2DXAndroidAnalySDK.h"
+
 
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
@@ -16,6 +18,8 @@
 #include "C2DXiOSAnalySDK.h"
 
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+
+#include "C2DXAndroidAnalySDK.h"
 
 #endif
 

@@ -47,7 +47,7 @@ bool HelloWorld::init()
     
     //用户注册事件
     MenuItemLabel *userRegister = MenuItemLabel::create(LabelTTF::create("用户注册事件", "Arial", 14),
-                                                         CC_CALLBACK_1(HelloWorld::trackPayEvent, this));
+                                                         CC_CALLBACK_1(HelloWorld::userRegister, this));
     userRegister->setPosition(winSize.width/3 * 1 , winSize.height / 10 * 7);
     auto userRegisterMenu = Menu::create(userRegister, NULL);
     userRegisterMenu->setPosition(Vec2::ZERO);
@@ -55,7 +55,7 @@ bool HelloWorld::init()
     
     //用户登录事件
     MenuItemLabel *userLogin = MenuItemLabel::create(LabelTTF::create("用户登录事件", "Arial", 14),
-                                                        CC_CALLBACK_1(HelloWorld::trackPayEvent, this));
+                                                        CC_CALLBACK_1(HelloWorld::userLogin, this));
     userLogin->setPosition(winSize.width/3 * 2 , winSize.height / 10 * 7);
     auto userLoginMenu = Menu::create(userLogin, NULL);
     userLoginMenu->setPosition(Vec2::ZERO);
@@ -71,7 +71,7 @@ bool HelloWorld::init()
     
     //角色创建事件
     MenuItemLabel *roleCreate = MenuItemLabel::create(LabelTTF::create("角色创建事件", "Arial", 14),
-                                                        CC_CALLBACK_1(HelloWorld::trackPayEvent, this));
+                                                        CC_CALLBACK_1(HelloWorld::roleCreate, this));
     roleCreate->setPosition(winSize.width/3 * 2 , winSize.height / 10 * 6);
     auto roleCreateMenu = Menu::create(roleCreate, NULL);
     roleCreateMenu->setPosition(Vec2::ZERO);
@@ -79,7 +79,7 @@ bool HelloWorld::init()
     
     //角色登录事件
     MenuItemLabel *roleLogin = MenuItemLabel::create(LabelTTF::create("角色登录事件", "Arial", 14),
-                                                      CC_CALLBACK_1(HelloWorld::trackPayEvent, this));
+                                                      CC_CALLBACK_1(HelloWorld::roleLogin, this));
     roleLogin->setPosition(winSize.width/3 * 1 , winSize.height / 10 * 5);
     auto roleLoginMenu = Menu::create(roleLogin, NULL);
     roleLoginMenu->setPosition(Vec2::ZERO);
@@ -87,7 +87,7 @@ bool HelloWorld::init()
     
     //角色信息更新事件
     MenuItemLabel *roleUpdate = MenuItemLabel::create(LabelTTF::create("角色信息更新事件", "Arial", 14),
-                                                      CC_CALLBACK_1(HelloWorld::trackPayEvent, this));
+                                                      CC_CALLBACK_1(HelloWorld::roleUpdate, this));
     roleUpdate->setPosition(winSize.width/3 * 2 , winSize.height / 10 * 5);
     auto roleUpdateMenu = Menu::create(roleUpdate, NULL);
     roleUpdateMenu->setPosition(Vec2::ZERO);
@@ -95,7 +95,7 @@ bool HelloWorld::init()
     
     //设置地理位置信息
     MenuItemLabel *setLocation = MenuItemLabel::create(LabelTTF::create("设置地理位置信息", "Arial", 14),
-                                                      CC_CALLBACK_1(HelloWorld::trackPayEvent, this));
+                                                      CC_CALLBACK_1(HelloWorld::setLocation, this));
     setLocation->setPosition(winSize.width/3 * 1 , winSize.height / 10 * 4);
     auto setLocationMenu = Menu::create(setLocation, NULL);
     setLocationMenu->setPosition(Vec2::ZERO);

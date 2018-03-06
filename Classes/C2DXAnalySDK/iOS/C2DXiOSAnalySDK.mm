@@ -765,7 +765,7 @@ void C2DXiOSAnalySDK::roleCreate(Role *role)
         model.roName = roName;
     }
     
-    const char *roCareerChar = role->roleId;
+    const char *roCareerChar = role->roCareer;
     if (roCareerChar)
     {
         NSString *roCareer = convertC2DXStringToNSString(C2DXString::create(roCareerChar));
@@ -877,7 +877,7 @@ void C2DXiOSAnalySDK::roleLogin(Role *role)
         model.roName = roName;
     }
     
-    const char *roCareerChar = role->roleId;
+    const char *roCareerChar = role->roCareer;
     if (roCareerChar)
     {
         NSString *roCareer = convertC2DXStringToNSString(C2DXString::create(roCareerChar));
@@ -989,7 +989,7 @@ void C2DXiOSAnalySDK::roleUpdate(Role *role)
         model.roName = roName;
     }
     
-    const char *roCareerChar = role->roleId;
+    const char *roCareerChar = role->roCareer;
     if (roCareerChar)
     {
         NSString *roCareer = convertC2DXStringToNSString(C2DXString::create(roCareerChar));
