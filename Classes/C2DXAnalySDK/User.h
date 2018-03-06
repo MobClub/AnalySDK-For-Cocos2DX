@@ -22,32 +22,32 @@ namespace mob
             /**
              *  用户id(必传属性)
              */
-            std::string *userId;
+            const char *userId;
             
             /**
              *  昵称
              */
-            std::string *nickName;
+            const char *nickName;
             
             /**
              *  性别
              */
-            std::string *gender;
+            const char *gender;
             
             /**
              *  国家
              */
-            std::string *country;
+            const char *country;
             
             /**
              *  省份
              */
-            std::string *province;
+            const char *province;
             
             /**
              *  城市
              */
-            std::string *city;
+            const char *city;
             
             /**
              *  年龄
@@ -57,42 +57,42 @@ namespace mob
             /**
              *  星座
              */
-            std::string *constellation;
+            const char *constellation;
             
             /**
              *  生肖
              */
-            std::string *zodiac;
+            const char *zodiac;
             
             /**
              *  注册方式
              */
-            std::string *regType;
+            const char *regType;
             
             /**
              *  注册渠道
              */
-            std::string *regChannel;
+            const char *regChannel;
             
             /**
              *  登录方式
              */
-            std::string *loginType;
+            const char *loginType;
             
             /**
              *  登录渠道
              */
-            std::string *loginChannel;
+            const char *loginChannel;
             
             /**
              *  账号类型
              */
-            std::string *userType;
+            const char *userType;
             
             /**
              *  防沉迷标识
              */
-            std::string *addiction;
+            const char *addiction;
             
             /**
              *  账号通用货币金额

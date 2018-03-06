@@ -22,27 +22,27 @@ namespace mob
             /**
              *  用户id(必传属性)
              */
-            std::string *userId;
+            const char *userId;
             
             /**
              *  角色id(必传属性)
              */
-            std::string *roleId;
+            const char *roleId;
             
             /**
              *  区服
              */
-            std::string *roServer;
+            const char *roServer;
             
             /**
              *  角色名称
              */
-            std::string *roName;
+            const char *roName;
             
             /**
              *  角色职业
              */
-            std::string *roCareer;
+            const char *roCareer;
             
             /**
              *  角色等级
@@ -52,12 +52,12 @@ namespace mob
             /**
              *  角色vip级别
              */
-            std::string *roVip;
+            const char *roVip;
             
             /**
              *  角色排位级别
              */
-            std::string *roRankLevel;
+            const char *roRankLevel;
             
             /**
              *  角色体力

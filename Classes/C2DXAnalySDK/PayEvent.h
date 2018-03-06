@@ -27,17 +27,17 @@ namespace mob
             /**
              *  角色id(必传属性)
              */
-            std::string *payContent;
+            const char *payContent;
             
             /**
              *  支付类型
              */
-            std::string *payType;
+            const char *payType;
             
             /**
              *  支付活动
              */
-            std::string *payActivity;
+            const char *payActivity;
             
             /**
              *  折扣
@@ -47,7 +47,7 @@ namespace mob
             /**
              *  折扣原因
              */
-            std::string *discountReason;
+            const char *discountReason;
             
             /**
              *  其他自定义属性

@@ -48,12 +48,19 @@ namespace mob
             
             /**
              用户注册事件
-             建议使用 +[User userWithId:regType:regChannel:]
-             创建带有注册类型(regType)和注册渠道(regChannel)的user
+             建议创建带有注册类型(regType)和注册渠道(regChannel)的user
              
              @param user 用户实体
              */
             static void userRegister(User *user);
+            
+            /**
+             用户登录事件
+             建议创建带有登录类型(regType)和登录渠道(regChannel)的user
+             
+             @param user 用户实体
+             */
+            static void userLogin(User *user);
             
             /**
              用户信息更新事件

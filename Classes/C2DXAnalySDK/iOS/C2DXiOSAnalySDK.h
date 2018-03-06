@@ -49,6 +49,14 @@ namespace mob
             static void userRegister(User *user);
             
             /**
+             用户登录事件
+             建议创建带有登录类型(regType)和登录渠道(regChannel)的user
+             
+             @param user 用户实体
+             */
+            static void userLogin(User *user);
+            
+            /**
              用户信息更新事件
              
              @param user 用户实体

@@ -6,9 +6,10 @@
 //
 
 #include "C2DXAnalySDK.hpp"
-#include "C2DXiOSAnalySDK.h"
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+
+#include "C2DXiOSAnalySDK.h"
 
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 
@@ -16,7 +17,7 @@
 
 using namespace mob::analysdk;
 
-void trackEvent(const char *eventName, C2DXDictionary *eventParams)
+void C2DXAnalySDK::trackEvent(const char *eventName, C2DXDictionary *eventParams)
 {
     
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
@@ -32,7 +33,7 @@ void trackEvent(const char *eventName, C2DXDictionary *eventParams)
     
 }
 
-void trackPayEvent(PayEvent *payEvent)
+void C2DXAnalySDK::trackPayEvent(PayEvent *payEvent)
 {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
@@ -46,7 +47,7 @@ void trackPayEvent(PayEvent *payEvent)
 #endif
 }
 
-void userRegister(User *user)
+void C2DXAnalySDK::userRegister(User *user)
 {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
@@ -60,7 +61,21 @@ void userRegister(User *user)
 #endif
 }
 
-void userUpdate(User *user)
+void C2DXAnalySDK::userLogin(User *user)
+{
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+    
+    //Andorid
+    
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+    
+    //iOS
+    C2DXiOSAnalySDK::userLogin(user);
+    
+#endif
+}
+
+void C2DXAnalySDK::userUpdate(User *user)
 {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
@@ -74,7 +89,7 @@ void userUpdate(User *user)
 #endif
 }
 
-void roleCreate(Role *role)
+void C2DXAnalySDK::roleCreate(Role *role)
 {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
@@ -88,7 +103,7 @@ void roleCreate(Role *role)
 #endif
 }
 
-void roleLogin(Role *role)
+void C2DXAnalySDK::roleLogin(Role *role)
 {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
@@ -102,7 +117,7 @@ void roleLogin(Role *role)
 #endif
 }
 
-void roleUpdate(Role *role)
+void C2DXAnalySDK::roleUpdate(Role *role)
 {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
@@ -116,7 +131,7 @@ void roleUpdate(Role *role)
 #endif
 }
 
-void setLocation(double latitude, double longitude)
+void C2DXAnalySDK::setLocation(double latitude, double longitude)
 {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
