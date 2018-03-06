@@ -6,11 +6,10 @@
 //
 
 #include "C2DXAnalySDK.hpp"
-<<<<<<< HEAD
-=======
+
 #include "C2DXiOSAnalySDK.h"
 #include "C2DXAndroidAnalySDK.h"
->>>>>>> origin/master
+
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
@@ -74,6 +73,7 @@ void C2DXAnalySDK::userLogin(User *user)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::userRegist(user);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     

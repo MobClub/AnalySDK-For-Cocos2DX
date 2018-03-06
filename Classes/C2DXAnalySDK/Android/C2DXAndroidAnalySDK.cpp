@@ -1,9 +1,10 @@
 //
 // Created by yjin on 2018/1/30.
 //
+#include <C2DXAnalySDK/PayEvent.h>
 #include "C2DXAndroidAnalySDK.h"
 
-using namespace cn::analysdk;
+using namespace mob::analysdk;
 
 void C2DXAndroidAnalySDK::setLocation(C2DXDouble longitude,C2DXDouble latitude)
  {
@@ -38,109 +39,117 @@ void C2DXAndroidAnalySDK::trackPayEvent(PayEvent* payEvent)
     jclass jApiClazz = env->FindClass("com/mob/analysdk/game/CoCosAPI");
     jmethodID jApiPayMethod = C2DXCxxJavaObject::getJavaMethodID(env, jApiClazz, "trackPayEvent",
             "(Ljava/lang/String;)V");
-    C2DXDictionary* dictionary = payEvent->toHashMap();
+     std::string str = payEvent->toString();
     jstring jInfo = NULL;
-     if (dictionary != NULL) {
-            CCJSONConverter* json = CCJSONConverter::sharedConverter();
-            const char* ccInfo = json->strFrom(dictionary);
-            jInfo =env->NewStringUTF(ccInfo);
+     if (str != NULL) {
+            const char* chardata = str.c_str();
+            jInfo = charTojstring(env,chardata);
      	}
     env->CallStaticVoidMethod(jApiClazz, jApiPayMethod,jInfo);
  }
 
- void C2DXAndroidAnalySDK::userRegist(UserEvent* userevent)
+ void C2DXAndroidAnalySDK::userRegist(User* userevent)
  {
     JvmJniEnv env;
     jclass jApiClazz = env->FindClass("com/mob/analysdk/game/CoCosAPI");
     jmethodID jApiPayMethod = C2DXCxxJavaObject::getJavaMethodID(env, jApiClazz, "userRegist",
                 "(Ljava/lang/String;)V");
-    C2DXDictionary* dictionary = userevent->toHashMap();
+    std:: string str = userevent->toString();
     jstring jInfo = NULL;
-    if (dictionary != NULL) {
-        CCJSONConverter* json = CCJSONConverter::sharedConverter();
-        const char* ccInfo = json->strFrom(dictionary);
-        jInfo =env->NewStringUTF(ccInfo);
+    if (str != NULL) {
+        const  char* chardata = str.c_str();
+        jInfo = charTojstring(env,chardata);
     }
      env->CallStaticVoidMethod(jApiClazz, jApiPayMethod,jInfo);
  }
 
- void C2DXAndroidAnalySDK::userLogin(UserEvent* userevent)
+ void C2DXAndroidAnalySDK::userLogin(User* userevent)
  {
     JvmJniEnv env;
     jclass jApiClazz = env->FindClass("com/mob/analysdk/game/CoCosAPI");
     jmethodID jApiPayMethod = C2DXCxxJavaObject::getJavaMethodID(env, jApiClazz, "userLogin",
                     "(Ljava/lang/String;)V");
-    C2DXDictionary* dictionary = userevent->toHashMap();
+    std::string str = userevent->toString();
     jstring jInfo = NULL;
-    if (dictionary != NULL) {
-         CCJSONConverter* json = CCJSONConverter::sharedConverter();
-        const char* ccInfo = json->strFrom(dictionary);
-        jInfo =env->NewStringUTF(ccInfo);
+    if (str != NULL) {
+        const char* ccInfo = str.c_str();
+        jInfo = charTojstring(env,ccInfo);
     }
     env->CallStaticVoidMethod(jApiClazz, jApiPayMethod,jInfo);
  }
 
- void C2DXAndroidAnalySDK::userUpdate(UserEvent* userEvent)
+ void C2DXAndroidAnalySDK::userUpdate(User* userEvent)
  {
     JvmJniEnv env;
     jclass jApiClazz = env->FindClass("com/mob/analysdk/game/CoCosAPI");
     jmethodID jApiPayMethod = C2DXCxxJavaObject::getJavaMethodID(env, jApiClazz, "userUpdate",
                         "(Ljava/lang/String;)V");
-    C2DXDictionary* dictionary = userEvent->toHashMap();
+    std::string str = userEvent->toString();
     jstring jInfo = NULL;
-    if (dictionary != NULL) {
-        CCJSONConverter* json = CCJSONConverter::sharedConverter();
-        const char* ccInfo = json->strFrom(dictionary);
-        jInfo =env->NewStringUTF(ccInfo);
+    if (str != NULL) {
+        const char* ccInfo = str.c_str();
+        jInfo =charTojstring(env,ccInfo);
     }
     env->CallStaticVoidMethod(jApiClazz, jApiPayMethod,jInfo);
  }
 
- void C2DXAndroidAnalySDK::roleCreate(RoleEvent* roleEvent)
+ void C2DXAndroidAnalySDK::roleCreate(Role* roleEvent)
  {
     JvmJniEnv env;
     jclass jApiClazz = env->FindClass("com/mob/analysdk/game/CoCosAPI");
     jmethodID jApiPayMethod = C2DXCxxJavaObject::getJavaMethodID(env, jApiClazz, "roleCreate",
                             "(Ljava/lang/String;)V");
-    C2DXDictionary* dictionary = roleEvent->toHashMap();
+    std::string str = roleEvent->toString();
     jstring jInfo = NULL;
-    if (dictionary != NULL) {
-        CCJSONConverter* json = CCJSONConverter::sharedConverter();
-        const char* ccInfo = json->strFrom(dictionary);
-        jInfo =env->NewStringUTF(ccInfo);
+    if (str != NULL) {
+        const char* ccInfo = str.c_str();
+        jInfo =charTojstring(env,ccInfo);
     }
     env->CallStaticVoidMethod(jApiClazz, jApiPayMethod,jInfo);
  }
 
- void C2DXAndroidAnalySDK::roleLogin(RoleEvent* roleEvent)
+ void C2DXAndroidAnalySDK::roleLogin(Role* roleEvent)
  {
     JvmJniEnv env;
     jclass jApiClazz = env->FindClass("com/mob/analysdk/game/CoCosAPI");
     jmethodID jApiPayMethod = C2DXCxxJavaObject::getJavaMethodID(env, jApiClazz, "roleLogin",
                                 "(Ljava/lang/String;)V");
-    C2DXDictionary* dictionary = roleEvent->toHashMap();
-    jstring jInfo = NULL;
-    if (dictionary != NULL) {
-        CCJSONConverter* json = CCJSONConverter::sharedConverter();
-        const char* ccInfo = json->strFrom(dictionary);
-        jInfo =env->NewStringUTF(ccInfo);
-    }
+     std::string str = roleEvent->toString();
+     jstring jInfo = NULL;
+     if (str != NULL) {
+         const char* ccInfo = str.c_str();
+         jInfo =charTojstring(env,ccInfo);
+     }
     env->CallStaticVoidMethod(jApiClazz, jApiPayMethod,jInfo);
  }
 
- void C2DXAndroidAnalySDK::roleUpdate(RoleEvent* roleEvent)
+ void C2DXAndroidAnalySDK::roleUpdate(Role* roleEvent)
  {
     JvmJniEnv env;
     jclass jApiClazz = env->FindClass("com/mob/analysdk/game/CoCosAPI");
     jmethodID jApiPayMethod = C2DXCxxJavaObject::getJavaMethodID(env, jApiClazz, "roleUpdate",
                                     "(Ljava/lang/String;)V");
-    C2DXDictionary* dictionary = roleEvent->toHashMap();
-    jstring jInfo = NULL;
-    if (dictionary != NULL) {
-         CCJSONConverter* json = CCJSONConverter::sharedConverter();
-        const char* ccInfo = json->strFrom(dictionary);
-        jInfo =env->NewStringUTF(ccInfo);
-    }
+     std::string str = roleEvent->toString();
+     jstring jInfo = NULL;
+     if (str != NULL) {
+         const char* ccInfo = str.c_str();
+         jInfo =charTojstring(env,ccInfo);
+     }
     env->CallStaticVoidMethod(jApiClazz, jApiPayMethod,jInfo);
  }
+
+jstring C2DXAndroidAnalySDK::charTojstring(JvmJniEnv env, const char* pat) {
+    //定义java String类 strClass
+    jclass strClass = env->FindClass("Ljava/lang/String;");
+    //获取String(byte[],String)的构造器,用于将本地byte[]数组转换为一个新String
+    jmethodID ctorID = (env)->GetMethodID(strClass, "<init>", "([BLjava/lang/String;)V");
+    //建立byte数组
+    jbyteArray bytes = (env)->NewByteArray(strlen(pat));
+    //将char* 转换为byte数组
+    (env)->SetByteArrayRegion(bytes, 0, strlen(pat), (jbyte*) pat);
+    // 设置String, 保存语言类型,用于byte数组转换至String时的参数
+    jstring encoding = (env)->NewStringUTF("GB2312");
+    //将byte数组转换为java String,并输出
+    return (jstring) (env)->NewObject(strClass, ctorID, bytes, encoding);
+}
 

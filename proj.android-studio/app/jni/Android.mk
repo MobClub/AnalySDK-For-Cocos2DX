@@ -17,12 +17,9 @@ LOCAL_SRC_FILES := $(LOCAL_PATH)/hellocpp/main.cpp \
                    $(LOCAL_PATH)/../../../Classes/AppDelegate.cpp \
                    $(LOCAL_PATH)/../../../Classes/HelloWorldScene.cpp \
                    $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/C2DXAnalySDK.cpp \
+                   $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/iOS/C2DXiOSAnalySDK.mm \
                    $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/Android/C2DXAndroidAnalySDK.cpp \
                    $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/Android/C2DXCxxJavaObject.cpp \
-                   $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/Android/PayEvent.cpp \
-                   $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/Android/RoleEvent.cpp \
-                   $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/Android/UserEvent.cpp \
-                   $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/Android/BaseEvent.cpp \
                    $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/Android/JSON/CCJSONConverter.cpp \
                    $(LOCAL_PATH)/../../../Classes/C2DXAnalySDK/Android/JSON/cJSON/cJSON.c
 
