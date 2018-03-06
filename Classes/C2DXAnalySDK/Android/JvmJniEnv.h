@@ -6,7 +6,7 @@
 
 USING_NS_CC;
 
-namespace cn
+namespace mob
 {
     namespace analysdk
     {

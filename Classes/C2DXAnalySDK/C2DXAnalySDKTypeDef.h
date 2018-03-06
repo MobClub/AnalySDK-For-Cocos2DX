@@ -34,6 +34,7 @@ USING_NS_CC;
 #define C2DXPoint cocos2d::Point
 #define C2DXDouble __Double
 
+
 #define C2DXInteger __Integer
 #define C2DXObject Ref
 #define C2DXPointMake(x,y) cocos2d::Point{static_cast<float>(x), static_cast<float>(y)}
