@@ -103,6 +103,8 @@ namespace mob
              *  其他自定义属性
              */
             C2DXDictionary *customProperties;
+
+            std::string toString();
             
         };
     }

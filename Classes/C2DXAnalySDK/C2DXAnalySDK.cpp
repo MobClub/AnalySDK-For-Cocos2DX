@@ -6,6 +6,11 @@
 //
 
 #include "C2DXAnalySDK.hpp"
+<<<<<<< HEAD
+=======
+#include "C2DXiOSAnalySDK.h"
+#include "C2DXAndroidAnalySDK.h"
+>>>>>>> origin/master
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
@@ -23,6 +28,7 @@ void C2DXAnalySDK::trackEvent(const char *eventName, C2DXDictionary *eventParams
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::trackEvent(eventName,eventParams);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -38,6 +44,7 @@ void C2DXAnalySDK::trackPayEvent(PayEvent *payEvent)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::trackPayEvent(payEvent);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -52,6 +59,7 @@ void C2DXAnalySDK::userRegister(User *user)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::userRegist(user);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -80,6 +88,7 @@ void C2DXAnalySDK::userUpdate(User *user)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::userUpdate(user);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -94,6 +103,7 @@ void C2DXAnalySDK::roleCreate(Role *role)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::roleCreate(role);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -108,6 +118,7 @@ void C2DXAnalySDK::roleLogin(Role *role)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::roleLogin(role);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -122,6 +133,7 @@ void C2DXAnalySDK::roleUpdate(Role *role)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::roleUpdate(role);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -136,6 +148,7 @@ void C2DXAnalySDK::setLocation(double latitude, double longitude)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
+    C2DXAndroidAnalySDK::setLocation(latitude,longitude);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
