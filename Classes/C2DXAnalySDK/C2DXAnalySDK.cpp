@@ -6,17 +6,15 @@
 //
 
 #include "C2DXAnalySDK.hpp"
-<<<<<<< HEAD
-=======
-#include "C2DXiOSAnalySDK.h"
-#include "C2DXAndroidAnalySDK.h"
->>>>>>> origin/master
+
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
 #include "C2DXiOSAnalySDK.h"
 
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+
+#include "C2DXAndroidAnalySDK.h"
 
 #endif
 
