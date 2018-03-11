@@ -100,12 +100,4 @@
  */
 + (void)identifyUser:(NSString *)userId userEntity:(ALSDKUser *)user __deprecated_msg("use userRegist/userLogin/userUpdate instead.");
 
-/**
- 是否开启测试日志。默认关闭。
- 当开启时,如发现有问题日志,会以log形式显示。
- 
- @param enable 开关YES/NO
- */
-+ (void)enableDebugLog:(BOOL)enable;
-
 @end
