@@ -30,6 +30,16 @@ char * CCJSONConverter::strFrom(__Dictionary *Dictionary)
     return returnStr;
 }
 
+char * CCJSONConverter::strFrom2(__Dictionary *Dictionary)
+{
+    CCAssert(Dictionary, "CCJSONConverter:can not convert a null pointer");
+    cJSON * json = cJSON_CreateObject();
+    convertDictionaryToJson(Dictionary, json);
+    char* returnStr = cJSON_PrintUnformatted2(json);
+    cJSON_Delete(json);
+    return returnStr;
+}
+
 __Dictionary * CCJSONConverter::dictionaryFrom(const char *str)
 {
     cJSON * json = cJSON_Parse(str);

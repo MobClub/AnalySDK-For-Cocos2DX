@@ -11,21 +11,54 @@ using namespace mob::analysdk;
 std::string User::toString() {
     std::stringstream stream;
     stream << "{";
-    stream << "\"_userId\":" << "\"" << userId << "\",";
-    stream << "\"_nickName\":" << "\"" << nickName << "\",";
-    stream << "\"_gender\":" << "\"" << gender << "\",";
-    stream << "\"_country\":" << "\"" << country << "\",";
-    stream << "\"_province\":" << "\"" << province << "\",";
-    stream << "\"_city\":" << "\"" << city << "\",";
-    stream << "\"_constellation\":" << "\"" << constellation << "\",";
-    stream << "\"_zodiac\":" << "\"" << zodiac << "\",";
-    stream << "\"_regType\":" << "\"" << regType << "\",";
-    stream << "\"_regChannel\":" << "\"" << regChannel << "\",";
-    stream << "\"_loginType\":" << "\"" << loginType << "\",";
-    stream << "\"_loginChannel\":" << "\"" << loginChannel << "\",";
-    stream << "\"_userType\":" << "\"" << userType << "\",";
-    stream << "\"_addiction\":" << "\"" << addiction << "\",";
-    stream << "\"_money\":" << "\"" << money << "\"";
+    if(userId != NULL) {
+        stream << "\"_userId\":" << "\"" << userId << "\",";
+    }
+    if(nickName != NULL) {
+        stream << "\"_nickName\":" << "\"" << nickName << "\",";
+    }
+    if(gender != NULL) {
+        stream << "\"_gender\":" << "\"" << gender << "\",";
+    }
+    if(country != NULL) {
+        stream << "\"_country\":" << "\"" << country << "\",";
+    }
+    if(province != NULL) {
+        stream << "\"_province\":" << "\"" << province << "\",";
+    }
+    if(constellation != NULL) {
+        stream << "\"_constellation\":" << "\"" << constellation << "\",";
+    }
+    if(zodiac != NULL) {
+        stream << "\"_zodiac\":" << "\"" << zodiac << "\",";
+    }
+    if(regType != NULL) {
+        stream << "\"_regType\":" << "\"" << regType << "\",";
+    }
+    if(regChannel != NULL) {
+        stream << "\"_regChannel\":" << "\"" << regChannel << "\",";
+    }
+    if(loginType != NULL) {
+        stream << "\"_loginType\":" << "\"" << loginType << "\",";
+    }
+    if(loginChannel != NULL) {
+        stream << "\"_loginChannel\":" << "\"" << loginChannel << "\",";
+    }
+    if(userType != NULL) {
+        stream << "\"_userType\":" << "\"" << userType << "\",";
+    }
+    if(addiction != NULL) {
+        stream << "\"_addiction\":" << "\"" << addiction << "\",";
+    }
+    #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+        if (customProperties != NULL) {
+            CCJSONConverter* json = CCJSONConverter::sharedConverter();
+            const char* ccInfo = json->strFrom2(customProperties);
+            stream << "\"customProperties\":" << "\"" << ccInfo << "\",";
+        }
+    #endif
+    stream << "\"_age\":" << age << ",";
+    stream << "\"_money\":" << money;
     stream << "}";
     return stream.str();
 }

@@ -10,6 +10,9 @@
 
 #include <stdio.h>
 #include "C2DXAnalySDKTypeDef.h"
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+#include "CCJSONConverter.h"
+#endif
 
 namespace mob
 {

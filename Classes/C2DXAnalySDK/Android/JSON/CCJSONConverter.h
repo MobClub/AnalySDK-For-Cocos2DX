@@ -27,6 +27,8 @@ public:
     static CCJSONConverter * sharedConverter();
     
     char * strFrom(__Dictionary * dictionary);
+
+    char * strFrom2(__Dictionary * dictionary);
     
     __Dictionary * dictionaryFrom(const char * str);
     

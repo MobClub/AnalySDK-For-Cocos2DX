@@ -17,27 +17,27 @@ namespace mob
     {
         class C2DXAndroidAnalySDK
         {
-             public:
-                    C2DXAndroidAnalySDK();
-                    ~C2DXAndroidAnalySDK();
-                     static void setLocation(C2DXDouble longitude,C2DXDouble latitude);
+        public:
+            C2DXAndroidAnalySDK();
+            ~C2DXAndroidAnalySDK();
+            static void setLocation(C2DXDouble longitude,C2DXDouble latitude);
 
-                     static void trackEvent(const char* eventName,C2DXDictionary* dictionary);
+            static void trackEvent(const char* eventName,C2DXDictionary* dictionary);
 
-                     static void trackPayEvent(PayEvent* payEvent);
+            static void trackPayEvent(PayEvent* payEvent);
 
-                     static void userRegist(User* userevent);
+            static void userRegist(User* userevent);
 
-                     static void userLogin(User* userevent);
+            static void userLogin(User* userevent);
 
-                     static void userUpdate(User* userEvent);
+            static void userUpdate(User* userEvent);
 
-                     static void roleCreate(Role* roleEvent);
+            static void roleCreate(Role* roleEvent);
 
-                     static void roleLogin(Role* roleEvent);
+            static void roleLogin(Role* roleEvent);
 
-                     static void roleUpdate(Role* roleEvent);
-                     static jstring charTojstring(JvmJniEnv env, const char* pat);
+            static void roleUpdate(Role* roleEvent);
+            static jstring charTojstring(JvmJniEnv env, const char* pat);
         };
     }
 
