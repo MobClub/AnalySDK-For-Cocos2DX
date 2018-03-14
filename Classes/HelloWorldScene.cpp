@@ -117,7 +117,7 @@ void HelloWorld::trackPayEvent(cocos2d::Ref *pSender)
     PayEvent *payEvent = new PayEvent();
     payEvent->payMoney = 2000;
     payEvent->payContent = "666666";
-    
+    //更多字段请参考PayEvent类
     C2DXAnalySDK::trackPayEvent(payEvent);
 }
 
@@ -127,7 +127,7 @@ void HelloWorld::userRegister(cocos2d::Ref *pSender)
     user->userId = "userId666888";
     user->regType = "regType";
     user->regChannel = "regChannel";
-    
+    //更多字段请参考User类
     C2DXAnalySDK::userRegister(user);
 }
 
@@ -137,7 +137,7 @@ void HelloWorld::userLogin(cocos2d::Ref *pSender)
     user->userId = "userId666888";
     user->regType = "regType";
     user->regChannel = "regChannel";
-    
+    //更多字段请参考User类
     C2DXAnalySDK::userLogin(user);
 }
 
@@ -147,7 +147,7 @@ void HelloWorld::userUpdate(cocos2d::Ref *pSender)
     user->userId = "userId666888";
     user->regType = "regType";
     user->regChannel = "regChannel";
-    
+    //更多字段请参考User类
     C2DXAnalySDK::userUpdate(user);
 }
 
@@ -156,7 +156,7 @@ void HelloWorld::roleCreate(cocos2d::Ref *pSender)
     Role *role = new Role();
     role->userId = "userId666888";
     role->roleId = "roleId666888";
-    
+    //更多字段请参考Role类
     C2DXAnalySDK::roleCreate(role);
 }
 
@@ -165,7 +165,7 @@ void HelloWorld::roleLogin(cocos2d::Ref *pSender)
     Role *role = new Role();
     role->userId = "userId666888";
     role->roleId = "roleId666888";
-    
+    //更多字段请参考Role类
     C2DXAnalySDK::roleLogin(role);
 }
 
@@ -174,7 +174,7 @@ void HelloWorld::roleUpdate(cocos2d::Ref *pSender)
     Role *role = new Role();
     role->userId = "userId666888";
     role->roleId = "roleId666888";
-    
+    //更多字段请参考Role类
     C2DXAnalySDK::roleUpdate(role);
 }
 

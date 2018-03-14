@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MOBAppkey</key>
+	<string>247bc92cf1092</string>
+	<key>MOBAppSecret</key>
+	<string>5f867441834f63245326718d00c5c43a</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -67,10 +71,6 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>MOBAppkey</key>
-	<string>247bc92cf1092</string>
-	<key>MOBAppSecret</key>
-	<string>5f867441834f63245326718d00c5c43a</string>
 	<key>UIAppFonts</key>
 	<array/>
 	<key>UIPrerenderedIcon</key>
