@@ -1,4 +1,4 @@
-# AnalySDK For Cococs2dx
+# AnalySDK For Cocos2dx
 ### 本插件是基于[AnalySDK](http://analysdk.mob.com/)(又称Mob统计分析SDK)对于Cococs2dx进行插件扩充支持。目的是方便Cocos2dx开发者使用AnalySDK
 
 **当前支持的 AnalySDK 版本**
