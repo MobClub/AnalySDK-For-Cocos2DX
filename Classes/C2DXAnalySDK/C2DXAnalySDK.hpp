@@ -98,6 +98,22 @@ namespace mob
              */
             static void setLocation(double latitude, double longitude);
             
+            /**
+             *    @brief    开始统计行为/事件时长(请结合behaviorEnd()使用,并对同一事件传入同一eventName)
+             *
+             *    @param     eventName      行为/事件名称
+             *    @param     eventParams    自定义参数
+             */
+            static void behaviorStart(const char *eventName, C2DXDictionary *eventParams);
+            
+            /**
+             *    @brief    结束统计行为/事件时长(请结合behaviorStart()使用,并对同一事件传入同一eventName)
+             *
+             *    @param     eventName      行为/事件名称
+             *    @param     eventParams    自定义参数
+             */
+            static void behaviorEnd(const char *eventName, C2DXDictionary *eventParams);
+            
         };
     }
 }

@@ -1075,3 +1075,45 @@ void C2DXiOSAnalySDK::setLocation(double latitude, double longitude)
     [AnalySDK setLocation:location];
 }
 
+
+void C2DXiOSAnalySDK::behaviorStart(const char *eventName, C2DXDictionary *eventParams)
+{
+    NSString *eventNameStr = @"";
+    
+    if (eventName)
+    {
+        eventNameStr = [NSString stringWithCString:eventName encoding:NSUTF8StringEncoding];
+    }
+    
+    NSMutableDictionary *eventParamsDic = [NSMutableDictionary dictionary];
+    
+    if (eventParams)
+    {
+        eventParamsDic = convertC2DXDictionaryToNSDictionary(eventParams);
+    }
+    
+    [AnalySDK behaviorStart:eventNameStr eventParams:eventParamsDic];
+}
+
+void C2DXiOSAnalySDK::behaviorEnd(const char *eventName, C2DXDictionary *eventParams)
+{
+    NSString *eventNameStr = @"";
+    
+    if (eventName)
+    {
+        eventNameStr = [NSString stringWithCString:eventName encoding:NSUTF8StringEncoding];
+    }
+    
+    NSMutableDictionary *eventParamsDic = [NSMutableDictionary dictionary];
+    
+    if (eventParams)
+    {
+        eventParamsDic = convertC2DXDictionaryToNSDictionary(eventParams);
+    }
+    
+    [AnalySDK behaviorEnd:eventNameStr eventParams:eventParamsDic];
+}
+
+
+
+

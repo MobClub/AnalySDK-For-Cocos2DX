@@ -34,6 +34,10 @@ public:
     
     void setLocation(cocos2d::Ref *pSender);
     
+    void behaviorStart(cocos2d::Ref *pSender);
+    
+    void behaviorEnd(cocos2d::Ref *pSender);
+    
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 };

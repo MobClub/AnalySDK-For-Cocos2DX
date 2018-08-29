@@ -101,6 +101,23 @@ bool HelloWorld::init()
     setLocationMenu->setPosition(Vec2::ZERO);
     this->addChild(setLocationMenu);
     
+    //设置地理位置信息
+    MenuItemLabel *behaviorStart = MenuItemLabel::create(LabelTTF::create("开始统计时长", "Arial", 14),
+                                                       CC_CALLBACK_1(HelloWorld::behaviorStart, this));
+    behaviorStart->setPosition(winSize.width/3 * 1 , winSize.height / 10 * 3);
+    auto behaviorStartMenu = Menu::create(behaviorStart, NULL);
+    behaviorStartMenu->setPosition(Vec2::ZERO);
+    this->addChild(behaviorStartMenu);
+    
+    //设置地理位置信息
+    MenuItemLabel *behaviorEnd = MenuItemLabel::create(LabelTTF::create("结束统计时长", "Arial", 14),
+                                                       CC_CALLBACK_1(HelloWorld::behaviorEnd, this));
+    behaviorEnd->setPosition(winSize.width/3 * 2 , winSize.height / 10 * 3);
+    auto behaviorEndMenu = Menu::create(behaviorEnd, NULL);
+    behaviorEndMenu->setPosition(Vec2::ZERO);
+    this->addChild(behaviorEndMenu);
+    
+    
     return true;
 }
 
@@ -181,6 +198,24 @@ void HelloWorld::roleUpdate(cocos2d::Ref *pSender)
 void HelloWorld::setLocation(cocos2d::Ref *pSender)
 {
     C2DXAnalySDK::setLocation(31.27006030476515, 120.70549774169922);
+}
+
+void HelloWorld::behaviorStart(cocos2d::Ref *pSender)
+{
+    __Dictionary *eventParams = __Dictionary::create();
+    eventParams -> setObject(__String::create("value"), "key");
+    
+    //开始统计行为/事件时长(请结合behaviorEnd()使用,并对同一事件传入同一eventName)
+    C2DXAnalySDK::behaviorStart("someEventName", eventParams);
+}
+
+void HelloWorld::behaviorEnd(cocos2d::Ref *pSender)
+{
+    __Dictionary *eventParams = __Dictionary::create();
+    eventParams -> setObject(__String::create("value"), "key");
+    
+    //结束统计行为/事件时长(请结合behaviorStart()使用,并对同一事件传入同一eventName)
+    C2DXAnalySDK::behaviorEnd("someEventName", eventParams);
 }
 
 void HelloWorld::menuCloseCallback(Ref* pSender)

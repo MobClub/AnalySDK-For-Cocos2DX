@@ -156,3 +156,32 @@ void C2DXAnalySDK::setLocation(double latitude, double longitude)
 #endif
 }
 
+void C2DXAnalySDK::behaviorStart(const char *eventName, C2DXDictionary *eventParams)
+{
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+    
+    //Andorid
+    
+    
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+    
+    //iOS
+    C2DXiOSAnalySDK::behaviorStart(eventName, eventParams);
+    
+#endif
+}
+
+void C2DXAnalySDK::behaviorEnd(const char *eventName, C2DXDictionary *eventParams)
+{
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+    
+    //Andorid
+    
+    
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+    
+    //iOS
+    C2DXiOSAnalySDK::behaviorEnd(eventName, eventParams);
+    
+#endif
+}
