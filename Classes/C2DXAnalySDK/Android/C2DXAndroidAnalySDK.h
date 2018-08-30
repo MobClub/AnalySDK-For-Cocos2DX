@@ -37,6 +37,11 @@ namespace mob
             static void roleLogin(Role* roleEvent);
 
             static void roleUpdate(Role* roleEvent);
+
+            static void behaviorStart(const char* eventName,C2DXDictionary* dictionary);
+
+            static void behaviorEnd(const char* eventName,C2DXDictionary* dictionary);
+
             static jstring charTojstring(JvmJniEnv env, const char* pat);
         };
     }

@@ -161,7 +161,7 @@ void C2DXAnalySDK::behaviorStart(const char *eventName, C2DXDictionary *eventPar
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
-    
+    C2DXAndroidAnalySDK::behaviorStart(eventName,eventParams);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     
@@ -176,7 +176,7 @@ void C2DXAnalySDK::behaviorEnd(const char *eventName, C2DXDictionary *eventParam
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     
     //Andorid
-    
+    C2DXAndroidAnalySDK::behaviorEnd(eventName,eventParams);
     
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     

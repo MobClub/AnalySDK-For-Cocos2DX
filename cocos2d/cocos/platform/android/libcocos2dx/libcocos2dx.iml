@@ -97,9 +97,9 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 14 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="__local_jars__:C.\Users\yychen\Downloads\analy-cocos-unity-demo\AnalySDK-For-Cocos2DX\cocos2d\cocos\platform\android\java\libs\com.android.vending.expansion.zipfile.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:C.\Users\yychen\Downloads\analy-cocos-unity-demo\AnalySDK-For-Cocos2DX\cocos2d\cocos\platform\android\java\libs\EngineDataManager.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:C.\Users\yychen\Downloads\analy-cocos-unity-demo\AnalySDK-For-Cocos2DX\cocos2d\cocos\platform\android\java\libs\httpclient-4.4.1.1.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:C.\Users\yychen\Downloads\analy-cocos-unity-demo\AnalySDK-For-Cocos2DX\cocos2d\cocos\platform\android\java\libs\android-async-http-1.4.9.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:C.\Users\yychen\Downloads\analy-cocos-unity-demo\AnalySDK-For-Cocos2DX\cocos2d\cocos\platform\android\java\libs\httpclient-4.4.1.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:C.\Users\yychen\Downloads\analy-cocos-unity-demo\AnalySDK-For-Cocos2DX\cocos2d\cocos\platform\android\java\libs\EngineDataManager.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:C.\Users\yychen\Downloads\analy-cocos-unity-demo\AnalySDK-For-Cocos2DX\cocos2d\cocos\platform\android\java\libs\com.android.vending.expansion.zipfile.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: __local_jars__:C.\Users\yychen\Downloads\analy-cocos-unity-demo\AnalySDK-For-Cocos2DX\cocos2d\cocos\platform\android\java\libs\android-async-http-1.4.9.jar:unspecified@jar" level="project" />
   </component>
 </module>
